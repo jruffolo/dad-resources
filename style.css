@@ -1,0 +1,80 @@
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--2: clamp(0.6252rem, 0.8355rem + -0.2714vw, 0.7813rem);
+    --step--1: clamp(0.884rem, 0.9561rem + -0.093vw, 0.9375rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2048rem + 0.7261vw, 1.7675rem);
+    --step-2: clamp(1.62rem, 1.3142rem + 1.5291vw, 2.4992rem);
+    --step-3: clamp(1.944rem, 1.391rem + 2.7651vw, 3.5339rem);
+    --step-4: clamp(2.3328rem, 1.4061rem + 4.6334vw, 4.997rem);
+    --step-5: clamp(2.7994rem, 1.3154rem + 7.4198vw, 7.0657rem);
+
+    --wa-font-size-3xl: var(--step-5);
+    --wa-font-size-2xl: var(--step-3);
+    --wa-font-size-m: var(--step-1);
+    --wa-font-size-s: var(--step-0);
+    --wa-font-size-xs: var(--step--1);
+
+    --wa-line-height-normal: 1.7;
+}
+
+body {
+    font-size: var(--wa-font-size-s);
+}
+
+main {
+    max-inline-size: 70rem;
+    margin-inline: auto;
+    padding-block: var(--step-3);
+    padding-inline: calc(var(--step-3) * 2 - 8vw);
+    /* padding-inline-end: 8vw; */
+}
+
+
+h1,
+h2 {
+    margin: 0;
+}
+
+h1:hover,
+h2:hover {
+    color: var(--wa-color-warning-90);
+}
+
+p {
+    max-inline-size: 50ch;
+    text-wrap: balance;
+}
+
+span {
+    font-size: var(--wa-font-size-xs);
+    color: var(--wa-color-neutral-60);
+}
+
+ul,
+ol {
+    margin: 0; 
+    padding: 0;
+}
+
+ul > * + * {
+    margin-block-start: 2em;
+}
+
+
+ul > li {
+    font-size: var(--wa-font-size-s);
+    list-style: none;
+    max-inline-size: 60ch;
+    text-wrap: balance;
+}
+
+a:not(:first-of-type) {
+    font-size: var(--wa-font-size-s);
+}
+
+a {
+    font-size: var(--wa-font-size-m);
+    margin-inline-end: 0.5rem;
+}
